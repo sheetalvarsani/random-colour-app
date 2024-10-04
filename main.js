@@ -14,7 +14,6 @@ function colorValue() {
 // Function to display a default color palette on page load
 function displayDefaultPalette() {
     colorCodeElement.innerHTML = `Color Code: ${defaultColor}`;
-
     generatePalette(defaultColor);
 }
 
@@ -72,11 +71,12 @@ function generatePalette(baseColor) {
         let colorSwatch = document.createElement("div");
         colorSwatch.className = "color-swatch";
         colorSwatch.style.backgroundColor = col;
-        colorSwatch.style.cursor = 'pointer';
+
         paletteContainer.appendChild(colorSwatch);
     });
 }
 
 button.addEventListener("click", colorChange);
 
+// Display default palette on window load
 window.onload = displayDefaultPalette;
