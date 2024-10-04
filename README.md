@@ -1,15 +1,15 @@
-# Random Color Generator
+# Random Colour Generator
 
 ## Overview
 
-The Random Color Generator is a web application that allows users to generate random colors and see a complementary color palette. Users can click a button to generate a new random color, which is then displayed along with a palette of related colors. Each color swatch in the palette shows its hex code when hovered over.
+The Random Colour Generator is a web application that allows users to generate random colours and see a complementary colour palette. Users can click a button to generate a new random colour, which is then displayed along with a palette of related colours. Each colour swatch in the palette shows its hex code when hovered over.
 
 <br>
 
 ## Features
 
-- **Random Color Generation**: Click the "Pick a Color" button to generate a random RGB color.
-- **Color Palette**: Displays a palette of complementary, analogous, and triadic colors based on the generated random color.
+- **Random Colour Generation**: Click the "Pick a Colour" button to generate a random RGB colour.
+- **Colour Palette**: Displays a palette of complementary, analogous, and triadic colours based on the generated random colour.
 
 <br>
 
@@ -18,7 +18,7 @@ The Random Color Generator is a web application that allows users to generate ra
 - HTML
 - CSS
 - JavaScript
-- [Chroma.js](https://gka.github.io/chroma.js/) - A JavaScript library for color manipulations.
+- [Chroma.js](https://gka.github.io/chroma.js/) - A JavaScript library for colour manipulations.
 
 <br>
 
@@ -41,9 +41,9 @@ cd random-colour-app
 <br>
 
 ## Acknowledgments
-Chroma.js for color manipulation functionalities. 
+Chroma.js for colour manipulation functionalities. 
 <br>
-Inspiration from various online color picker applications.
+Inspiration from various online colour picker applications.
 
 <br>
 
