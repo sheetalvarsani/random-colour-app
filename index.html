@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
 
-<body>
-  <section id='container'>
-    <img src='http://pngimg.com/uploads/rainbow/rainbow_PNG5580.png'/>
-    <h1>Random Color Generator</h1>
-    <p>Find your new favorite color!</p>
-    <button id='color-button'>Pick a Color</button>
-    <button id='next-button'>Mystery Color</button>
-  </section>
- <script  src="main.js"></script>
+        <link rel="icon" type="image/x-icon" href="./images/rainbow.png" />
+        <!-- <a href="https://www.flaticon.com/free-icons/rainbow" title="rainbow icons">Rainbow icons created by Flat Icons Design - Flaticon</a> -->
+        <title>Color Picker App</title>
+    </head>
 
-</body>
+    <body>
+        <section id="container">
+            <img src="./images/rainbow.png" alt="Rainbow Image" />
+            <h1>Random Color Generator</h1>
+            <p>Find your new favorite color!</p>
+            <button class="color-button">Pick a Color</button>
+            <p id="color-code"></p>
+
+            <div id="palette-container">
+                <h3>Generated Palette</h3>
+                <div id="palette"></div>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </body>
 </html>
