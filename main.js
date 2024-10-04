@@ -1,26 +1,34 @@
-// this variable stores the "Pick a Color" button
+// Get the "Pick a Color" and "Mystery Color" buttons
 let button = document.getElementById('color-button');
 
-// this variable stores the "Mystery Color" button
-let mysteryButton = document.getElementById('next-button');
+// Get the color code display element
+let colorCodeDisplay = document.getElementById('color-code');
 
-// this random number function will create color codes for randomColor variable:
-
+// Function to generate a random color value
 function colorValue() {
   return Math.floor(Math.random() * 256);
 }
- 
-// colorChange() function will be used as event handler function to randomly change colors of the buttons when specific events are fired on them:
 
-function colorChange(event){
-  let randomColor = 'rgb(' + colorValue() + ',' + colorValue() + ',' + colorValue() + ')';
-  event.target.style.backgroundColor = randomColor; // changes bg color of event target
+// Function to convert RGB values to Hex code
+function rgbToHex(r, g, b) {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
 }
 
-// create event handler property on button element that fires when clicked - use colorChange as event handler function:
+// Function to change the color of buttons and display the color code
+function colorChange(event) {
+  let r = colorValue();
+  let g = colorValue();
+  let b = colorValue();
+  let randomColor = `rgb(${r}, ${g}, ${b})`;
+  
+  // Change the background color of the target button
+  event.target.style.backgroundColor = randomColor;
+  
+  // Display the color code in both RGB and Hex format
+  let hexColor = rgbToHex(r, g, b);
+  colorCodeDisplay.textContent = `Color Code: ${hexColor} (RGB: ${r}, ${g}, ${b})`;
+}
 
-button.addEventListener('click', colorChange)
-
-// create event handler property on mysteryButton element that fires when you rotate the mouse wheel or slide down on the mousepad - assign same colorChange event handler function:
-
-mysteryButton.addEventListener('wheel', colorChange)
+// Event listeners for buttons
+button.addEventListener('click', colorChange);
+button.addEventListener('wheel', colorChange);
